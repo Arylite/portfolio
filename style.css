@@ -1,0 +1,235 @@
+:root {
+    --win-bg: #c0c0c0;
+    --win-white: #ffffff;
+    --win-gray: #808080;
+    --win-blue: #000080;
+    --win-blue-light: #0000ff;
+    --win-black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "MS Sans Serif", sans-serif;
+}
+
+body {
+    background-color: #008080;
+    color: var(--win-black);
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#desktop {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.window {
+    background: var(--win-bg);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-gray) var(--win-gray) var(--win-white);
+    box-shadow: 1px 1px 0 0 var(--win-black);
+    margin-bottom: 20px;
+}
+
+.title-bar {
+    background: var(--win-blue);
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--win-white);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.title-bar-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-bar-controls button {
+    width: 16px;
+    height: 14px;
+    background: var(--win-bg);
+    border: 1px solid;
+    border-color: var(--win-white) var(--win-gray) var(--win-gray) var(--win-white);
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.window-body {
+    padding: 10px;
+    border: 1px inset var(--win-white);
+}
+
+.menu-bar {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 2px 5px;
+    border-bottom: 1px solid var(--win-gray);
+    font-size: 13px;
+}
+
+.menu-bar li a {
+    text-decoration: none;
+    color: var(--win-black);
+}
+
+.menu-bar li a:hover {
+    background: var(--win-blue);
+    color: var(--win-white);
+}
+
+h1 { font-size: 24px; margin-bottom: 5px; }
+.subtitle { font-size: 14px; color: #444; font-style: italic; margin-bottom: 10px; }
+hr { border: 1px inset var(--win-white); margin: 10px 0; }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.project-window {
+    background: var(--win-bg);
+    border: 1px solid var(--win-gray);
+}
+
+.project-content {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.project-image {
+    width: 150px;
+    height: 100px;
+    border: 2px inset var(--win-white);
+    background: #000;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info h3 { font-size: 16px; margin-bottom: 5px; color: var(--win-blue); }
+.project-info p, .project-info ul { font-size: 13px; }
+.project-info ul { padding-left: 20px; }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-group {
+    padding: 10px;
+    border: 1px inset var(--win-white);
+    background: #e0e0e0;
+}
+
+.retro-btn {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--win-bg);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-gray) var(--win-gray) var(--win-white);
+    text-decoration: none;
+    color: var(--win-black);
+    font-size: 13px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.retro-btn:active {
+    border-color: var(--win-gray) var(--win-white) var(--win-white) var(--win-gray);
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: var(--win-bg);
+    border-top: 2px solid var(--win-white);
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.start-button {
+    height: 22px;
+    padding: 0 5px;
+    font-weight: bold;
+    background: var(--win-bg);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-gray) var(--win-gray) var(--win-white);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.taskbar-item {
+    height: 22px;
+    padding: 0 10px;
+    border: 2px solid;
+    border-color: var(--win-gray) var(--win-white) var(--win-white) var(--win-gray);
+    background: #d4d4d4;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.taskbar-item.active {
+    background: #eee;
+    font-weight: bold;
+}
+
+.clock {
+    padding: 0 10px;
+    border-left: 1px solid var(--win-gray);
+    margin-left: auto;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .project-content { flex-direction: column; }
+    .project-image { width: 100%; height: 150px; }
+}

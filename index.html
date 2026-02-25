@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Isaac Allard - Portfolio</title>
+</head>
+
+<body>
+    <div id="desktop">
+        <header class="window" id="main-nav">
+            <div class="title-bar">
+                <div class="title-bar-text">Navigateur.exe</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <nav class="window-body">
+                <ul class="menu-bar">
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="cv.html">Mon_CV.pdf</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="window section-window" id="about">
+                <div class="title-bar">
+                    <div class="title-bar-text">Portrait - Isaac_Allard.txt</div>
+                </div>
+                <div class="window-body">
+                    <h1>Isaac ALLARD</h1>
+                    <p class="subtitle">Développeur Logiciel • Étudiant Epitech</p>
+                    <hr>
+                    <p>Passionné par le développement bas niveau et les architectures systèmes. Actuellement en première
+                        année chez Epitech Réunion.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Arylite" target="_blank" class="retro-btn">Voir mon travail</a>
+                        <a href="mailto:isaac.allard.974@hotmail.com" class="retro-btn">Me contacter par mail</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="window section-window" id="projects">
+                <div class="title-bar">
+                    <div class="title-bar-text">Mes_Projets.dir</div>
+                </div>
+                <div class="window-body">
+                    <div class="projects-list">
+                        <article class="project-window">
+                            <div class="title-bar">
+                                <div class="title-bar-text">Glowbound.exe</div>
+                            </div>
+                            <div class="window-body">
+                                <div class="project-content">
+                                    <div class="project-image">
+                                        <img src="assets/glowbound.png" alt="Glowbound Screenshot">
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>Glowbound (48h Game Jam)</h3>
+                                        <ul>
+                                            <li>Godot & C#</li>
+                                            <li>IA personnalisée</li>
+                                            <li>Assets originaux</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-window">
+                            <div class="title-bar">
+                                <div class="title-bar-text">CPU_Arch.c</div>
+                            </div>
+                            <div class="window-body">
+                                <div class="project-content">
+                                    <div class="project-image">
+                                        <img src="assets/cpu.png" alt="CPU Arch Screenshot">
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>Architecture CPU 8-bit</h3>
+                                        <p>Conception d'une architecture processeur 8-bit en C. Calculs simples et
+                                            opérations logiques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-window">
+                            <div class="title-bar">
+                                <div class="title-bar-text">Bastion.py</div>
+                            </div>
+                            <div class="window-body">
+                                <div class="project-content">
+                                    <div class="project-info">
+                                        <h3>Bastion SSH</h3>
+                                        <p>Serveur SSH en Python pour gérer l'accès backbone via clés SSH.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-window">
+                            <div class="title-bar">
+                                <div class="title-bar-text">BijuBot.sh</div>
+                            </div>
+                            <div class="window-body">
+                                <div class="project-content">
+                                    <div class="project-info">
+                                        <h3>BijuAutoScime</h3>
+                                        <p>Bot Discord d'analyse de données joueurs et optimisation d'équipes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-window">
+                            <div class="title-bar">
+                                <div class="title-bar-text">Hosting_Infrastructure.sys</div>
+                            </div>
+                            <div class="window-body">
+                                <div class="project-content">
+                                    <div class="project-info">
+                                        <h3>Solution d'Hébergement Personnalisée</h3>
+                                        <p>Je travaille actuellement sur l'implémentation de ma propre solution
+                                            d'hébergement utilisant <strong>Proxmox</strong> et <strong>Docker</strong>.
+                                        </p>
+                                        <p>Je développe tout par moi-même :</p>
+                                        <ul>
+                                            <li>Panel de contrôle personnalisé</li>
+                                            <li>Agent de gestion (indépendant de QEMU)</li>
+                                            <li>Architecture Backend & Infrastructure réseau</li>
+                                            <li>Déploiement automatisé</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="window section-window" id="skills">
+                <div class="title-bar">
+                    <div class="title-bar-text">System_Capabilities.cfg</div>
+                </div>
+                <div class="window-body">
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <strong>[Systèmes]</strong>
+                            <p>C, C++, Python, Linux, Bash, Docker</p>
+                        </div>
+                        <div class="skill-group">
+                            <strong>[Web/App]</strong>
+                            <p>TypeScript, React, Next.js, Godot</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="taskbar">
+            <button class="start-button">Démarrer</button>
+            <div class="taskbar-items">
+                <div class="taskbar-item active">Portfolio</div>
+            </div>
+            <div class="clock" id="clock">12:00</div>
+        </footer>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+
+</html>
